@@ -39,110 +39,54 @@
             </div>
 
             <!--    Start of Form      -->
+            <!--  Location   -->
             <form id="form">
                 <div class="form-group">
                     <label for="InputLocation1">Location</label>
                     <input type="location" class="form-control" id="InputLocation1" placeholder="Enter your zipcode">
                 </div>
-                <div>
-                    <fieldset class="form-group" id="typePet">
-                        <legend class="sectionTitle">Type of Pet</legend>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="dog" checked>
-                                    Dog
-                                </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="cat" checked>
-                                Cat
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="other" checked>
-                                Other
-                            </label>
-                        </div>
-                    </fieldset>
+                <!--  Type of Pet   -->
+                <div class="form-group" id="typePet">
+                    <label for="Select1">Type of Pet</label>
+                    <select class="form-control">
+                        <option value="dog">dog</option>
+                        <option value="cat">cat</option>
+                        <option value="bird">bird</option>
+                        <option value="horse">horse</option>
+                        <option value="reptile">reptile</option>
+                        <option value="smallfurry">small furry</option>
+                        <option value="barnyard">barnyard</option>
+                    </select>
                 </div>
-                <div>
-                    <fieldset class="form-group">
-                        <legend class="sectionTitle">Size of Pet</legend>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios1" value="small" checked>
-                                Small
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios1" value="medium" checked>
-                                Medium
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios1" value="large" checked>
-                                Large
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios1" value="extralarge" checked>
-                                Extra Large
-                            </label>
-                        </div>
-                    </fieldset>
+                <!--  Size of Pet   -->
+                <div class="form-group" id="sizePet">
+                    <label for="Select2">Size of Pet</label>
+                    <select class="form-control">
+                        <option value="S">small</option>
+                        <option value="M">medium</option>
+                        <option value="XL">large</option>
+                        <option value="extra-large">extra large</option>
+                    </select>
                 </div>
-
-                <div>
-                    <fieldset class="form-group">
-                        <legend class="sectionTitle">Age of Pet</legend>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios3" value="baby" checked>
-                                Baby
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios3" value="youth" checked>
-                                Youth
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios3" value="adult" checked>
-                                Adult
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios3" value="senior" checked>
-                                Senior
-                            </label>
-                        </div>
-                    </fieldset>
+                <!--  Age of Pet   -->
+                <div class="form-group" id="agePet">
+                    <label for="Select3">Age of Pet</label>
+                    <select class="form-control">
+                        <option value="baby">baby</option>
+                        <option value="young">youth</option>
+                        <option value="adult">adult</option>
+                        <option value="senior">senior</option>
+                    </select>
                 </div>
-                <div>
-                    <fieldset class="form-group">
-                        <legend class="sectionTitle">Gender of Pet</legend>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios4" value="female" checked>
-                                Female
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios4" value="male" checked>
-                                Male
-                            </label>
-                        </div>
-                    </fieldset>
+                <!--  Gender of Pet   -->
+                <div class="form-group" id="genderPet">
+                    <label for="Select4">Gender of Pet</label>
+                    <select class="form-control">
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                    </select>
                 </div>
+                <!--  Submit Button   -->
                 <div class="submit">
                     <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
                 </div>
@@ -150,6 +94,10 @@
             </form>
         </div>
     </div>
+    <!--    End of Main Page      -->
+
+    <!--    jQuery Script      -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 

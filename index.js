@@ -3,8 +3,8 @@
 //const bodyParser = require("body-parser")
 //const hbs = require("express-handlebars")
 //const mongoose = require("mongoose")
-
-//Create the exprses app
+//
+////Create the express app
 //const app = express()
 
 //Require the models
@@ -36,8 +36,6 @@
 
 const form = document.querySelector("#form")
 
-
-
 let petApp = document.querySelector("#app")
 
 form.addEventListener('submit', e => {
@@ -46,20 +44,21 @@ form.addEventListener('submit', e => {
     let pet = {}
 
     pet.location = document.querySelector('#InputLocation1').value
-    //    let petType = e.target.querySelector('radio').value
+    pet.type = document.querySelector('#typePet option:checked').value
+    pet.size = document.querySelector('#sizePet option:checked').value
+    pet.age = document.querySelector('#agePet option:checked').value
 
     getPet(pet)
 })
 
 function getPet(petObj) {
-    let request = new XMLHttpRequest()
-    request.addEventListener('load', e => {
-        pet = JSON.parse(request.response)
-        console.log(pet)
-        //        renderView()
-    })
-    request.open('GET', `https://api.petfinder.com/pet.find?format=json&key=14b6d9e4ab69be01492eef7a4729a019&animal=dog&location=${petObj.location}&callback=?`, true)
-    request.send()
+    $.ajax({
+        dataType: "json",
+        url: `http://api.petfinder.com/pet.find?format=json&key=14b6d9e4ab69be01492eef7a4729a019&animal=${petObj.type}&location=${petObj.location}&size=${petObj.size}&age=${petObj.age}&callback=?`,
+        success: (function (resp) {
+            console.log(resp)
+        })
+    });
 }
 
 function renderView() {

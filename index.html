@@ -1,25 +1,156 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        
-        <title>Little Muppet</title>
-        
-        <link rel="stylesheet" href="/public/main.css">
-    </head>
-    <body>
-        <div class="color-overlay">
-        <nav class="navbar navbar-light bg-faded">
-            <a class="navbar-brand" href="#">Navbar</a>
-        </nav>
-        <div class="container post-vertical-center" style="z-index:2">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>Little Muppet</h1>
-                    <h3>Find your perfect fuzzy friend</h3>
+
+<head>
+    <!--    Bootstrap    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <title>Little Muppet</title>
+
+    <!--    CSS    -->
+    <link rel="stylesheet" href="/public/main.css">
+</head>
+
+<body>
+    <div class="maincontainer">
+        <!--     Start of Nav Bar          -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="navigation">
+                <div class="navigation_pages">
+                    <button type="button" class="btn btn-default" id="home" href="index.html">
+                        <span class="glyphicon glyphicon-home
+                        "aria-hidden="true"></span>
+                        </button>
+                    <div class="sitename">Little Muppet</div>
                 </div>
             </div>
+        </nav>
+        <!--     End of Nav Bar          -->
+
+        <!--    Start of Main Page      -->
+        <div lass="backgroundImage">
+            <div class="image_container">
+                <div class="imageContent">
+                    <img id="Animal" src="public/images/Animal2017173.jpg">
+                </div>
+            </div>
+            <div class="formTitle">
+                <h1>Find an Adoptable Pet</h1>
+            </div>
+
+            <!--    Start of Form      -->
+            <form id="form">
+                <div class="form-group">
+                    <label for="InputLocation1">Location</label>
+                    <input type="location" class="form-control" id="InputLocation1" placeholder="Enter your zipcode">
+                </div>
+                <div>
+                    <fieldset class="form-group" id="typePet">
+                        <legend class="sectionTitle">Type of Pet</legend>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="dog" checked>
+                                    Dog
+                                </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="cat" checked>
+                                Cat
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="other" checked>
+                                Other
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset class="form-group">
+                        <legend class="sectionTitle">Size of Pet</legend>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios1" value="small" checked>
+                                Small
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios1" value="medium" checked>
+                                Medium
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios1" value="large" checked>
+                                Large
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios1" value="extralarge" checked>
+                                Extra Large
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div>
+                    <fieldset class="form-group">
+                        <legend class="sectionTitle">Age of Pet</legend>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios3" value="baby" checked>
+                                Baby
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios3" value="youth" checked>
+                                Youth
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios3" value="adult" checked>
+                                Adult
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios3" value="senior" checked>
+                                Senior
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset class="form-group">
+                        <legend class="sectionTitle">Gender of Pet</legend>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios4" value="female" checked>
+                                Female
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios4" value="male" checked>
+                                Male
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="submit">
+                    <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+                </div>
+                <div id="petApp"></div>
+            </form>
         </div>
-        </div>
-    </body>
+    </div>
+    <script src="index.js"></script>
+</body>
+
 </html>

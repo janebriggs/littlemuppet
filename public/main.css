@@ -1,34 +1,69 @@
 body {
-    background: url(images/Animal2017173.jpg) center center fixed;
-    -webkit-background-size: cover;
-    background-repeat: no-repeat;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    font-size: 16px;
 }
 
-.color-overlay {
-    position: absolute;
-    height: 100%;
+
+.maincontainer {
+    background: white;
     width: 100%;
-    background-color: white;
-    z-index: 1;
-    opacity: .3;
 }
 
-
-.navbar-brand {
-    font-size: 200%;
-}
-
-
-h1 {
+.navbar {
+    background: #fff;
+/*	padding: 2rem 5rem;*/
+	font-family: sans-serif;
+    position: fixed;
+    width: 100%;
+    height: 8%;
     text-align: center;
-    margin: 75px;
+    opacity: .9;
+
 }
 
-h3 {
+.sitename {
+    font-size: 4rem;
+    color: black;
+}
+
+.navigation {
+/*    display: inline-block; */
+    color: black;
+}
+
+navigation_pages {
+    width: 100%;
+    color: black;
+    
+}
+
+#home {
+    position: fixed;
+    left: 2%;
+    top: 1.5%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.form-group {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.formTitle {
     text-align: center;
 }
 
+.form-group {
+    margin-top: 3%;
+}
 
+.submit {
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 8%;
+}

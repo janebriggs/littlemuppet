@@ -5,6 +5,7 @@ body {
 .maincontainer {
     background: white;
     width: 100%;
+    position: relative;
 }
 
 .navbar {
@@ -15,12 +16,14 @@ body {
     width: 100%;
     height: 8%;
     text-align: center;
-    opacity: .9;
+    opacity: 1;
 }
 
 .sitename {
-    font-size: 4rem;
+    font-size: 2.5em;
     color: black;
+    letter-spacing: 3.4px;
+    font-weight: bold;
 }
 
 .navigation {
@@ -37,6 +40,7 @@ navigation_pages {
     position: fixed;
     left: 2%;
     top: 1.5%;
+    font-size: 1.2em;
 }
 
 img {
@@ -44,10 +48,46 @@ img {
     height: 100%;
 }
 
+.imageContent {
+    position: relative;
+}
+
+.tagDiv {
+    width: 20%;
+    @include media-breakpoint-up(sm) {
+        html {
+            font-size: 16px;
+        }
+    }
+}
+
+.tagline {
+    position: absolute;
+    font-size: 2.4em;
+    font-weight: bold;
+    color: white;
+    top: 12%;
+    left: 5%;
+    @include media-breakpoint-up(sm) {
+        html {
+            font-size: 16px;
+        }
+    }
+}
+
+.tagDescription {
+    position: absolute;
+    font-size: 1.5em;
+    color: white;
+    top: 20%;
+    left: 5%;
+}
+
 .form-group {
-    width: 75%;
+    width: 36%;
     height: 100%;
     margin: 0 auto;
+    margin-top: 3%;
 }
 
 .formTitle {
@@ -58,4 +98,14 @@ img {
     text-align: center;
     margin-top: 3%;
     margin-bottom: 8%;
+}
+
+#petwall-container {
+    margin: 8% 5% 5% 5%;
+}
+
+.site-footer {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
 }

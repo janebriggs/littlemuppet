@@ -1,0 +1,90 @@
+<div class="maincontainer">
+    <!--     Start of Nav Bar          -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navigation">
+            <div class="navigation_pages">
+                <button type="button" class="btn btn-default" id="home" href="index.html">
+                        <span class="glyphicon glyphicon-home
+                        "aria-hidden="true"></span>
+                        </button>
+                <div class="sitename">Little Muppet</div>
+            </div>
+        </div>
+    </nav>
+    <!--     End of Nav Bar          -->
+
+    <!--    Start of Main Page      -->
+    <div lass="backgroundImage">
+        <div class="image_container">
+            <div class="imageContent">
+                <img id="Animal" src="images/Animal2017173.jpg">
+                <div class="tagDiv">
+                    <h1 class="tagline">find a fuzzy friend</h1>
+                    <h2 class="tagDescription"> little muppet is a pet finder <br> that will match you with <br> an adoptable pet</h2>
+                </div>
+            </div>
+
+        </div>
+        <div class="formTitle">
+            <h1>Find an Adoptable Pet</h1>
+        </div>
+
+        <!--    Start of Form      -->
+        <!--  Location   -->
+        <form id="form" action="/searchresults" method="get">
+            <!--the action is what the url is called-->
+            <div class="form-group">
+                <label for="InputLocation1">Location</label>
+                <input type="location" class="form-control" id="InputLocation1" name="InputLocation1" placeholder="Enter your zipcode" value="">
+            </div>
+            <!--  Type of Pet   -->
+            <div class="form-group" id="typePet">
+                <label for="Select1">Type of Pet</label>
+                <select class="form-control">
+                        <option value="dog">dog</option>
+                        <option value="cat">cat</option>
+                        <option value="bird">bird</option>
+                        <option value="horse">horse</option>
+                        <option value="reptile">reptile</option>
+                        <option value="smallfurry">small furry</option>
+                        <option value="barnyard">barnyard</option>
+                    </select>
+            </div>
+            <!--  Size of Pet   -->
+            <div class="form-group" id="sizePet">
+                <label for="Select2">Size of Pet</label>
+                <select class="form-control">
+                        <option value="S">small</option>
+                        <option value="M">medium</option>
+                        <option value="L">large</option>
+                        <option value="extra-large">extra large</option>
+                    </select>
+            </div>
+            <!--  Age of Pet   -->
+            <div class="form-group" id="agePet">
+                <label for="Select3">Age of Pet</label>
+                <select class="form-control">
+                        <option value="baby">baby</option>
+                        <option value="young">youth</option>
+                        <option value="adult">adult</option>
+                        <option value="senior">senior</option>
+                    </select>
+            </div>
+            <!--  Gender of Pet   -->
+            <div class="form-group" id="genderPet">
+                <label for="Select4">Gender of Pet</label>
+                <select class="form-control">
+                        <option value="M">male</option>
+                        <option value="F">female</option>
+                    </select>
+            </div>
+            <!--  Submit Button   -->
+            <div class="submit">
+                <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+            </div>
+            <div id="petApp"></div>
+        </form>
+    </div>
+</div>
+
+<!--    End of Main Page      -->

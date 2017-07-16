@@ -1,0 +1,28 @@
+{
+  "name": "littlemuppet",
+  "version": "1.0.0",
+  "description": "Find your perfect furry friend.",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "jquery": "^3.2.1",
+    "mongoose": "^4.11.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janebriggs/littlemuppet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janebriggs/littlemuppet/issues"
+  },
+  "homepage": "https://github.com/janebriggs/littlemuppet#readme"
+}

@@ -3,10 +3,16 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const hbs = require("express-handlebars")
 const mongoose = require("mongoose")
-const jquery = require("jquery")
+
+mongoose.connect("mongodb://janewheatley:mongoJane!@cluster0-shard-00-00-puk5q.mongodb.net:27017,cluster0-shard-00-01-puk5q.mongodb.net:27017,cluster0-shard-00-02-puk5q.mongodb.net:27017/<Cluster0>?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin")
 
 //Create the express app
 const app = express()
+
+//Use Body Parser
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
 
 //Require the models
 //const ... = require("./models/....")
@@ -22,35 +28,19 @@ app.engine("handlebars", hbs({
 }))
 app.set("view engine", "handlebars")
 
-
-//Use the route
-app.use("/searchresults", searchController)
-app.use("/", indexController)
-
 // Serving static files (like css)
 app.use(express.static('public'))
 
-//Use Body Parser
-app.use(bodyParser.urlencoded({
-    extended: true
-}))
+
+//Use the route (needs to go last)
+app.use("/", indexController)
+app.use("/searchresults", searchController)
+
 
 //Listen
 app.listen(3000, function () {
     console.log("listening")
 })
-
-//API Request
-
-function getPet(petObj) {
-    $.ajax({
-        dataType: "json",
-        url: `http://api.petfinder.com/pet.find?format=json&key=14b6d9e4ab69be01492eef7a4729a019&animal=${petObj.type}&location=${petObj.location}&size=${petObj.size}&age=${petObj.age}&sex=${petObj.sex}&callback=?`,
-        success: (function (resp) {
-            console.log(resp)
-        })
-    });
-}
 
 
 function renderView() {

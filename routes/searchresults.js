@@ -1,34 +1,32 @@
 const express = require("express")
+const request = require('request')
+
 
 const searchController = express.Router()
 
 
-searchController.get("/", function (req, res) {
+searchController.post("/", function (req, res) {
     let pet = {}
+    let petLocation = req.body.InputLocation1
+    let petType = req.body.type
+    let petSize = req.body.size
+    let petAge = req.body.age
+    let petSex = req.body.sex
+    let apiUrl = `http://api.petfinder.com/pet.find?format=json&key=14b6d9e4ab69be01492eef7a4729a019&animal=${petType}&location=${petLocation}&size=${petSize}&age=${petAge}&sex=${petSex}&callback=?`
     //    pet.location = req.body.InputLocation1;
-    console.log(req.body)
-    res.render("petwall", pet)
-    //i will res.render a new page in views and pass it the pet object (whatever i name my petdirectory file in views folder)
+
+    //`request` is asynchronous - so we have to pass a callback for when that processes ends (or use promises!)
+    request.get(apiUrl, (err, response, body) => {
+//        let data = response.body
+        res.render("petwall", body)
+//        console.log(data)
+    })
+ 
+
+    //    /*
+    //    Here you'll make AJAX reqeust usin request module, in callback to request you'll build pets object and call res.render('petwall', pets):
+    //    */
 })
-
-
 //
-//const form = document.querySelector("#form")
 //
-//let petApp = document.querySelector("#app")
-//
-//form.addEventListener('submit', e => {
-//    e.preventDefault()
-//
-//    let pet = {}
-//
-//    pet.location = document.querySelector('#InputLocation1').value
-//    pet.type = document.querySelector('#typePet option:checked').value
-//    pet.size = document.querySelector('#sizePet option:checked').value
-//    pet.age = document.querySelector('#agePet option:checked').value
-//    pet.sex = document.querySelector('#genderPet option:checked').value
-//
-//    getPet(pet)
-//})
-
 module.exports = searchController

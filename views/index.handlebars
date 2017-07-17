@@ -14,10 +14,12 @@
     <!--     End of Nav Bar          -->
 
     <!--    Start of Main Page      -->
-    <div lass="backgroundImage">
+    <div class="backgroundImage">
         <div class="image_container">
-            <div class="imageContent">
-                <img id="Animal" src="images/Animal2017173.jpg">
+            <div class="colorOverlay">
+                <div class="imageContent">
+                    <img id="Animal" src="images/Animal2017173.jpg">
+                </div>
                 <div class="tagDiv">
                     <h1 class="tagline">find a fuzzy friend</h1>
                     <h2 class="tagDescription"> little muppet is a pet finder <br> that will match you with <br> an adoptable pet</h2>
@@ -31,7 +33,7 @@
 
         <!--    Start of Form      -->
         <!--  Location   -->
-        <form id="form" action="/searchresults" method="get">
+        <form id="form" method="POST" action="/searchresults">
             <!--the action is what the url is called-->
             <div class="form-group">
                 <label for="InputLocation1">Location</label>
@@ -40,42 +42,42 @@
             <!--  Type of Pet   -->
             <div class="form-group" id="typePet">
                 <label for="Select1">Type of Pet</label>
-                <select class="form-control">
-                        <option value="dog">dog</option>
-                        <option value="cat">cat</option>
-                        <option value="bird">bird</option>
-                        <option value="horse">horse</option>
-                        <option value="reptile">reptile</option>
-                        <option value="smallfurry">small furry</option>
-                        <option value="barnyard">barnyard</option>
+                <select class="form-control" name="type">
+                        <option value="dog" name="type">dog</option>
+                        <option value="cat" name="type">cat</option>
+                        <option value="bird" name="type">bird</option>
+                        <option value="horse" name="type">horse</option>
+                        <option value="reptile"name="type">reptile</option>
+                        <option value="smallfurry" name="type">small furry</option>
+                        <option value="barnyard" name="type">barnyard</option>
                     </select>
             </div>
             <!--  Size of Pet   -->
             <div class="form-group" id="sizePet">
                 <label for="Select2">Size of Pet</label>
-                <select class="form-control">
-                        <option value="S">small</option>
-                        <option value="M">medium</option>
-                        <option value="L">large</option>
-                        <option value="extra-large">extra large</option>
+                <select class="form-control" name="size">
+                        <option value="S" name="size">small</option>
+                        <option value="M" name="size">medium</option>
+                        <option value="L" name="size">large</option>
+                        <option value="extra-large" name="size">extra large</option>
                     </select>
             </div>
             <!--  Age of Pet   -->
             <div class="form-group" id="agePet">
                 <label for="Select3">Age of Pet</label>
-                <select class="form-control">
-                        <option value="baby">baby</option>
-                        <option value="young">youth</option>
-                        <option value="adult">adult</option>
-                        <option value="senior">senior</option>
+                <select class="form-control" name="age">
+                        <option value="baby" name ="age">baby</option>
+                        <option value="young" name ="age">youth</option>
+                        <option value="adult" name ="age">adult</option>
+                        <option value="senior" name ="age">senior</option>
                     </select>
             </div>
             <!--  Gender of Pet   -->
             <div class="form-group" id="genderPet">
                 <label for="Select4">Gender of Pet</label>
-                <select class="form-control">
-                        <option value="M">male</option>
-                        <option value="F">female</option>
+                <select class="form-control" name="sex">
+                        <option value="M" name="sex">male</option>
+                        <option value="F" name="sex">female</option>
                     </select>
             </div>
             <!--  Submit Button   -->

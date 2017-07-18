@@ -17,8 +17,10 @@ searchController.post("/", function (req, res) {
     request.get(apiUrl, (err, response, body) => {
         const data = JSON.parse(body)
         const pets = data.petfinder.pets.pet
-//        console.log(pets)
-        console.log(pets[0].media.photos)
+        //        console.log(pets[0].media.photos.photo[0]['$t']);
+        console.log(pets[0].contact.email)
+        //        console.log(pets)
+        //        console.log(pets[0].media.photos.$t);
         res.render('petwall', {
             pets
         })

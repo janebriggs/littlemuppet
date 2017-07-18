@@ -1,4 +1,4 @@
-<div class="maincontainer">
+<div class="maincontainer" id="petWallPage">
     <!--     Start of Nav Bar          -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="navigation">
@@ -12,16 +12,19 @@
             </div>
         </div>
     </nav>
-</div>
+    <!--End of Nav Bar-->
+    <div class="petwallContainer">
+        <div class="masonry">
+            {{#each pets}}
+            <div class="thumbnail">
+                <div class="item">
+                    <img src="{{media.photos.photo.2.$t}}" />
 
 
-<!--trying to get the pet images appear in a wall-->
+                </div>
 
-<div id="app">
-    <ul>
-        {{#each pets}}
-        <li>{{ name.$t }} - {{ age.$t }} - {{media.photos}}
-            <li> {{/each}}
-    </ul>
-
+            </div>
+            {{/each}}
+        </div>
+    </div>
 </div>

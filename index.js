@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({
 //Require the Controllers/Routers
 const searchController = require("./routes/searchresults.js")
 const indexController = require("./routes/index.js")
+const singleController = require("./routes/single.js")
 
 //Register and Use Handlebars
 app.engine("handlebars", hbs({
@@ -35,6 +36,7 @@ app.use(express.static('public'))
 //Use the route (needs to go last)
 app.use("/", indexController)
 app.use("/searchresults", searchController)
+app.use("/single", singleController)
 
 
 //Listen

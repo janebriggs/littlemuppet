@@ -2,11 +2,8 @@ body {
     font-size: 16px;
 }
 
-.maincontainer {
-    background: white;
-    width: 100%;
-    position: relative;
-}
+
+/* start of nav bar css*/
 
 .navbar {
     background: #fff;
@@ -19,15 +16,7 @@ body {
     opacity: 1;
 }
 
-.sitename {
-    font-size: 2.5em;
-    color: black;
-    letter-spacing: 3.4px;
-    font-weight: bold;
-}
-
 .navigation {
-    /*    display: inline-block; */
     color: black;
 }
 
@@ -41,6 +30,25 @@ navigation_pages {
     left: 2%;
     top: 1.5%;
     font-size: 1.2em;
+}
+
+.sitename {
+    font-size: 2.5em;
+    color: black;
+    letter-spacing: 3.4px;
+    font-weight: bold;
+}
+
+
+/*end of nav bar css*/
+
+
+/* start of main index css */
+
+.maincontainer {
+    background: white;
+    width: 100%;
+    position: relative;
 }
 
 .colorOverlay {
@@ -79,6 +87,33 @@ img {
     line-height: 1.4em;
 }
 
+
+/*media queries to make text responsive on mobile*/
+
+@media only screen and (max-width: 400px) {
+    .tagline {
+        font-size: 120%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .tagDescription {
+        font-size: 90%;
+    }
+}
+
+.site-footer {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+/*end of main index css*/
+
+
+/*start of form css*/
+
 .form-group {
     width: 36%;
     height: 100%;
@@ -96,12 +131,9 @@ img {
     margin-bottom: 8%;
 }
 
+
+/*end of form css*/
+
 #petwall-container {
     margin: 8% 5% 5% 5%;
-}
-
-.site-footer {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 15px;
 }

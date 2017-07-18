@@ -14,7 +14,14 @@
     </nav>
 </div>
 
+
 <!--trying to get the pet images appear in a wall-->
 
 <div id="app">
+    <ul>
+        {{#each pets}}
+        <li>{{ name.$t }} - {{ age.$t }} - {{media.photos}}
+            <li> {{/each}}
+    </ul>
+
 </div>

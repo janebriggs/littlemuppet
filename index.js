@@ -40,7 +40,5 @@ app.use("/single", singleController)
 
 
 //Listen
-let port = process.env.PORT || 3000… app.listen(port);
-
-
-}
+let port = process.env.PORT || 3000
+app.listen(port);

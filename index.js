@@ -40,11 +40,7 @@ app.use("/single", singleController)
 
 
 //Listen
-app.listen(3000, function () {
-    console.log("listening")
-})
+let port = process.enc.PORT || 3000… app.listen(port);
 
 
-function renderView() {
-    //            app.innerHTML = template(TBD)
 }

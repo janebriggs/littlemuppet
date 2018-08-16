@@ -4,7 +4,7 @@ const bodyParser = require("body-parser")
 const hbs = require("express-handlebars")
 const mongoose = require("mongoose")
 
-mongoose.connect("mongodb://janewheatley:Animal!1@ds163232.mlab.com:63232/littlemuppet")
+mongoose.createConnection("mongodb://janewheatley:Animal!1@ds163232.mlab.com:63232/littlemuppet")
 
 //Create the express app
 const app = express()

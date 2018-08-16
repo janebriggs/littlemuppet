@@ -18,7 +18,7 @@ searchController.post("/", function (req, res) {
         const data = JSON.parse(body)
         const pets = data.petfinder.pets.pet
         //        console.log(pets[0].media.photos.photo[0]['$t']);
-        console.log(pets[0].contact.email)
+//        console.log(pets[0].contact.email)
         //        console.log(pets)
         //        console.log(pets[0].media.photos.$t);
         res.render('petwall', {
